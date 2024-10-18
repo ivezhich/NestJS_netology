@@ -3,15 +3,19 @@ const express = require('express');
 const router = express.Router();
 const { multer, STORAGE_PATH } = require('../middleware/file.js');
 const path = require('node:path');
-const { storage } = require('../controllers/books.controller.js');
+const container = require('../container');
+const BookStorage = require("../controllers/books.controller.js");
+
 
 
 
 router.get('/', async (req, res) => {
+    const storage = container.get(BookStorage);
     res.json(await storage.getAll());
 });
 
 router.get('/:id', async (req, res) => {
+    const storage = container.get(BookStorage);
     const { id } = req.params;
 
     try {
@@ -25,6 +29,7 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', multer.single('book'),
     async (req, res) => {
+        const storage = container.get(BookStorage);
         try {
             const newBook = {
                 title,
@@ -48,6 +53,7 @@ router.post('/', multer.single('book'),
 
 
 router.put('/:id', async (req, res) => {
+    const storage = container.get(BookStorage);
     const content = {
         title,
         description,
@@ -68,6 +74,7 @@ router.put('/:id', async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
+    const storage = container.get(BookStorage);
     const { id } = req.params;
     try {
         const result = await storage.delete(id);
@@ -80,6 +87,7 @@ router.delete('/:id', async (req, res) => {
 });
 
 router.get('/:id/download', async (req, res) => {
+    const storage = container.get(BookStorage);
     const { id } = req.params;
 
     try {

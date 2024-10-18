@@ -24,4 +24,4 @@ class BookStorage {
 	}
 };
 
-module.exports = { storage: new BookStorage() };
+module.exports = BookStorage;
