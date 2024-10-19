@@ -1,5 +1,5 @@
 import { injectable } from 'inversify';
-import bookModel from './book.model';
+import bookModel from './books.model';
 //import { v4 as uuid } from 'uuid';
 import "reflect-metadata";
 import { BookDto, CreateBookDto, UpdateBookDto } from './dto/books.dto';
