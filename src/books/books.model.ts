@@ -1,5 +1,5 @@
-const { Schema, model } = require('mongoose')
-
+import { Schema, model } from 'mongoose'
+import { BookDto } from './dto/books.dto';
 const bookSchema = new Schema({
     title: {
         type: String,
@@ -31,4 +31,4 @@ const bookSchema = new Schema({
     }
 });
 
-module.exports = model('Book', bookSchema);
+export default model<BookDto & Document>('Book', bookSchema);

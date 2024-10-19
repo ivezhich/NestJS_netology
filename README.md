@@ -1,7 +1,7 @@
 # NodeJSHomework
 ## Запуск
 ```
-docker-compose up 
+docker-compose up --build
 ```
 
 ## Папки с данными

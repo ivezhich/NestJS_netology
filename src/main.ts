@@ -1,9 +1,10 @@
-const express = require('express');
-const booksRouter = require('./routes/books');
-const userRouter = require('./routes/user');
-const error404 = require('./middleware/err-404');
-const logger = require('./middleware/logger');
-const mongoose = require('mongoose');
+//import express from 'express';
+import express from 'express';
+import booksRouter from './books/books.route';
+import userRouter from './routes/user';
+import error404 from './middleware/err-404';
+import logger from './middleware/logger';
+import mongoose from 'mongoose';
 
 const app = express();
 app.use(express.json());

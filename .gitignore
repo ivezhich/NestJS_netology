@@ -5,3 +5,5 @@ config.js
 .env
 .vscode
 file_storage/*.txt
+dist
+tsconfig.tsbuildinfo

@@ -1,7 +1,7 @@
-const fs = require('fs')
-const os = require('os')
+import fs from 'fs'
+import os from 'os'
 
-module.exports = (req, res, next) => {
+const logger = (req: any, res: any, next: any) => {
 	const now = Date.now()
 	const { url, method } = req
 
@@ -12,4 +12,6 @@ module.exports = (req, res, next) => {
 	})
 
 	next()
-}
+};
+
+export default logger;

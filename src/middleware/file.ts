@@ -1,4 +1,4 @@
-const multer = require('multer');
+import multer from 'multer';
 
 
 const STORAGE_PATH = 'file_storage';
@@ -10,5 +10,5 @@ const storage = multer.diskStorage({
         cb(null, `${Date.now()}-${file.originalname}`);
     }
 });
-
-module.exports = { multer: multer({ storage }), STORAGE_PATH };
+const multerStorage = multer({ storage })
+export { multerStorage, STORAGE_PATH };

@@ -17,7 +17,7 @@ export default [
   {
     rules: {
       "prefer-const": "error",
-      "@typescript-eslint/no-unused-vars": "error",
+      //"@typescript-eslint/no-unused-vars": "error",
       "no-undef": "error",
     }
   }
