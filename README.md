@@ -22,6 +22,21 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+## 009-rxjs
+Запрос на поиск репозиториев:
+
+```
+http://localhost:3000/rxjs/repositories/?text={Текст запроса}&hub={github|gitlab}&count={ограниечение на количество записей}
+```
+
+## Пример
+
+```
+http://localhost:3000/rxjs/repositories/?text=netology&hub=github&count=10
+http://localhost:3000/rxjs/repositories/?text=netology&hub=gitlab&count=10
+```
+
+
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
