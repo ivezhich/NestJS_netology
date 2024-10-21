@@ -67,6 +67,6 @@ export class RxjsService {
       return await firstValueFrom(data$);
     }
 
-    return Promise.resolve({ error: 'hub should be github or gitlab' });
+    return Promise.resolve({ error: `Hub: ${hub} не найден` });
   }
 }
